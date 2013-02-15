@@ -53,7 +53,7 @@ static VALUE rb_geoip_new(int argc, VALUE *argv, VALUE self)
 
   if(RTEST(check_cache)) flag |= GEOIP_CHECK_CACHE;
   
-  if(gi = GeoIP_open(STR2CSTR(filename), flag)) {
+  if(gi = GeoIP_open(StringValuePtr(filename), flag)) {
     database = Data_Wrap_Struct(cDB, 0, GeoIP_delete, gi);
     rb_obj_call_init(database, 0, 0);
   } else { 
@@ -111,7 +111,7 @@ VALUE rb_geoip_look_up(VALUE self, VALUE addr) {
   
   Check_Type(addr, T_STRING);
   Data_Get_Struct(self, GeoIP, gi);
-  if(record = GeoIP_record_by_addr(gi, STR2CSTR(addr))) {
+  if(record = GeoIP_record_by_addr(gi, StringValuePtr(addr))) {
     hash =  rb_record_to_hash(record); 
     GeoIPRecord_delete(record);
   }
