@@ -1,13 +1,9 @@
-require 'rake'
-require 'rake/clean'
+require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'rdoc/task'
 require 'rake/extensiontask'
 
 task :default => [:compile, :test]
-
-CLEAN.add "geoip_city.{o,bundle,so,obj,pdb,lib,def,exp}"
-CLOBBER.add ['Makefile', 'mkmf.log']
 
 Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.add ['README', 'ext/geoip_city/geoip_city.c']
