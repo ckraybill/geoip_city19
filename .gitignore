@@ -12,7 +12,7 @@ _yardoc
 coverage
 data
 doc/
-lib/geoip_city.bundle
+lib/geoip_city/geoip_city.bundle
 lib/bundler/man
 pkg
 rdoc

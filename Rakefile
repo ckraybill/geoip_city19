@@ -16,4 +16,6 @@ Rake::TestTask.new do |t|
   t.verbose = true
 end
 
-Rake::ExtensionTask.new('geoip_city')
+Rake::ExtensionTask.new 'geoip_city' do |ext|
+  ext.lib_dir = 'lib/geoip_city'
+end

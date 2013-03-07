@@ -1,6 +1,2 @@
-require "geoip_city.bundle"
+require "geoip_city/geoip_city"
 require "geoip_city/version"
-
-module GeoipCity
-  # Your code goes here...
-end
