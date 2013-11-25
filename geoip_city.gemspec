@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email            = ['ry@tinyclouds.org', 'ckraybill@gmail.com']
   spec.description      = "Ruby 1.9 library provides a binding to the C library for, given an IP address, return a JSON hash of best-guess geographical data"
   spec.summary          = "A Binding to the GeoIP C library for Ruby 19"
-  spec.homepage         = 'https://github.com/ckraybill/geoip_city'
+  spec.homepage         = 'https://github.com/ckraybill/geoip_city19'
 
   spec.files            = Dir.glob('lib/**/*.rb') +
                           Dir.glob('ext/**/*.{c,h,rb}')
